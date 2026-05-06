@@ -1,0 +1,5 @@
+<menu>
+   <Services>
+      <MDNSBridge VisibleName="mDNS Bridge" cssClass="fa fa-circle-nodes fa-fw" url="/ui/mdnsbridge"/>
+   </Services>
+</menu>
