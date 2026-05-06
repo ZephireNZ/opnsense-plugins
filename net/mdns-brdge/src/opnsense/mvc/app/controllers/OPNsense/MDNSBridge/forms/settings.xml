@@ -1,0 +1,45 @@
+<form>
+    <field>
+        <id>enabled</id>
+        <label>Enable</label>
+        <type>checkbox</type>
+        <help>Enable mDNS Bridge</help>
+    </field>
+    <field>
+        <id>global.disableIPv4</id>
+        <label>Disable IPv4</label>
+        <type>checkbox</type>
+        <help>Disable IPv4 forwarding.</help>
+    </field>
+    <field>
+        <id>global.disableIPv6</id>
+        <label>Disable IPv6</label>
+        <type>checkbox</type>
+        <help>Disable IPv6 forwarding.</help>
+    </field>
+    <field>
+        <id>global.allowInboundFilters</id>
+        <label>Allow Inbound Filters</label>
+        <type>select_multiple</type>
+        <allownew>true</allownew>
+        <style>tokenize</style>
+        <hint>Example: _airplay, MyAppleTV, MyAppleTV._airplay</hint>
+        <help>Any names that do not match one of the filters in the list will be discarded from incoming packets on all interfaces.</help>
+    </field>
+    <field>
+        <id>global.denyInboundFilters</id>
+        <label>Deny Inbound Filters</label>
+        <type>select_multiple</type>
+        <allownew>true</allownew>
+        <style>tokenize</style>
+        <hint>Example: _airplay, MyAppleTV, MyAppleTV._airplay</hint>
+        <help>Any names that match one of the filters in the list will be discarded from incoming packets on all interfaces.</help>
+    </field>
+    <field>
+        <id>global.disablePacketFiltering</id>
+        <label>Disable Packet Filtering</label>
+        <type>checkbox</type>
+        <advanced>true</advanced>
+        <help>Completely disables packet decoding. Packets received on an interface will be forwarded directly to neighboring interfaces without any form of validation. Use this option with caution.</help>
+    </field>
+</form>

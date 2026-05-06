@@ -29,6 +29,10 @@
             </denyInboundFilters>
         </global>
         <interfaces type="ArrayField">
+            <enabled type="BooleanField">
+                <Default>1</Default>
+                <Required>Y</Required>
+            </enabled>
             <name type="InterfaceField">
                 <Default>lan</Default>
                 <Required>Y</Required>
