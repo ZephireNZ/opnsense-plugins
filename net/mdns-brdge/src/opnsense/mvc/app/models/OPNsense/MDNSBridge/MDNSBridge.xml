@@ -1,0 +1,59 @@
+<model>
+    <mount>//OPNsense/MDNSBridge</mount>
+    <version>1.0.0</version>
+    <description>mDNS Bridge settings</description>
+    <items>
+        <enabled type="BooleanField">
+            <Default>0</Default>
+            <Required>Y</Required>
+        </enabled>
+        <global>
+            <disableIPv4 type="BooleanField">
+                <Default>0</Default>
+                <Required>N</Required>
+            </disableIPv4>
+            <disableIPv6 type="BooleanField">
+                <Default>0</Default>
+                <Required>N</Required>
+            </disableIPv6>
+            <disablePacketFiltering type="BooleanField">
+                <Default>0</Default>
+                <Required>N</Required>
+            </disablePacketFiltering>
+            <!-- TODO: Regex for mDNS service tags FooBar, _printer, FooBar._printer etc -->
+            <allowInboundFilters type="CSVListField">
+                <Required>N</Required>
+            </allowInboundFilters>
+            <denyInboundFilters type="CSVListField">
+                <Required>N</Required>
+            </denyInboundFilters>
+        </global>
+        <interfaces type="ArrayField">
+            <name type="InterfaceField">
+                <Default>lan</Default>
+                <Required>Y</Required>
+                <Multiple>N</Multiple>
+            </name>
+            <disableIPv4 type="BooleanField">
+                <Default>0</Default>
+                <Required>Y</Required>
+            </disableIPv4>
+            <disableIPv6 type="BooleanField">
+                <Default>0</Default>
+                <Required>Y</Required>
+            </disableIPv6>
+            <allowInboundFilters type="CSVListField">
+                <Required>N</Required>
+            </allowInboundFilters>
+            <denyInboundFilters type="CSVListField">
+                <Required>N</Required>
+            </denyInboundFilters>
+            <allowOutboundFilters type="CSVListField">
+                <Required>N</Required>
+            </allowOutboundFilters>
+            <denyOutboundFilters type="CSVListField">
+                <Required>N</Required>
+            </denyOutboundFilters>
+        </interfaces>
+    </items>
+</model>
